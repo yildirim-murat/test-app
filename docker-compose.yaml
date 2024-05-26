@@ -1,0 +1,13 @@
+services:
+  web:
+    container_name: c_webui
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    stdin_open: true
+    tty: true
